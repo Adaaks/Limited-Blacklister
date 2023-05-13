@@ -123,8 +123,8 @@ action:
               - service_template: light.turn_on
                 target: !input light
                 data_template:
-                  brightness_step_pct: "{{ 5 }}"
-                  transition: "{{ speed }}"
+                  brightness_step_pct: "{{ 10 }}"
+                  transition: "{{ 0}}"
     - conditions:
         - "{{ command == 'step' }}"
         - "{{ cluster_id == 8 }}"
@@ -139,8 +139,8 @@ action:
               - service_template: light.turn_on
                 target: !input light
                 data_template:
-                  brightness_step_pct: "{{ -5 }}"
-                  transition: "{{ speed }}"
+                  brightness_step_pct: "{{ -10 }}"
+                  transition: "{{ 0 }}"
 
     # Command Mode: Color Temperature
     - conditions:
